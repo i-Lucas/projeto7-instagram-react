@@ -1,79 +1,46 @@
-export default function Body() {
+import Story from "./Story"
+
+const contents = {
+    
+    img: [
+        "assets/img/9gag.svg",
+        "assets/img/meowed.svg",
+        "assets/img/barked.svg",
+        "assets/img/nathanwpylestrangeplanet.svg",
+        "assets/img/wawawicomics.svg",
+        "assets/img/respondeai.svg",
+        "assets/img/filomoderna.svg",
+        "assets/img/memeriagourmet.svg",
+    ],
+    user: [
+        "9gag",
+        "meowed",
+        "barked",
+        "nathanwpylestrangeplanet",
+        "wawawicomics",
+        "respondeai",
+        "filomoderna",
+        "memeriagourmet"
+    ]
+}
+
+export default function Body(props) {
     return (
         <div className="corpo">
             <div className="esquerda">
+
                 <div className="stories">
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/9gag.svg" alt="x" />
-                        </div>
-                        <div className="usuario">
-                            9gag
-                        </div>
-                    </div>
 
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/meowed.svg" alt="x" />
-                        </div>
-                        <div className="usuario">
-                            meowed
-                        </div>
-                    </div>
+                    <Story
+                        img={contents.img[0]}
+                        user={contents.user[0]}
+                    />
 
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/barked.svg" alt="x" />
-                        </div>
-                        <div className="usuario">
-                            barked
-                        </div>
-                    </div>
+                    <Story
+                        img={contents.img[1]}
+                        user={contents.user[1]}
+                    />
 
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/nathanwpylestrangeplanet.svg" alt="x" />
-                        </div>
-                        <div className="usuario">
-                            nathanwpylestrangeplanet
-                        </div>
-                    </div>
-
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/wawawicomics.svg" alt="x" />
-                        </div>
-                        <div className="usuario">
-                            wawawicomics
-                        </div>
-                    </div>
-
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/respondeai.svg" alt="x" />
-                        </div>
-                        <div className="usuario">
-                            respondeai
-                        </div>
-                    </div>
-
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/filomoderna.svg" alt="x" />
-                        </div>
-                        <div className="usuario">
-                            filomoderna
-                        </div>
-                    </div>
-
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/memeriagourmet.svg" alt="x" />
-                        </div>
-                        <div className="usuario">
-                            memeriagourmet
-                        </div>
-                    </div>
 
                     <div className="setinha">
                         <ion-icon name="chevron-forward-circle"></ion-icon>

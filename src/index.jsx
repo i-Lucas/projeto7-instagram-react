@@ -1,9 +1,10 @@
 import reactDom from "react-dom"
-import Navbar from "./components/Navbar"
-import Body from "./components/Body"
-import Mobile from "./components/Mobile"
 
-function H1() {
+import Navbar from "./components/Navbar/Navbar"
+import Body from "./components/Body/Body"
+import Mobile from "./components/Mobile/Mobile"
+
+function H1(props) {
     return (
         <>
             <Navbar />
