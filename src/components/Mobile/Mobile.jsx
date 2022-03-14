@@ -1,13 +1,4 @@
-import Icones from "../Icones/Icones"
-
-const names = [
-
-    "home",
-    "search-outline",
-    "add-circle-outline",
-    "heart-outline",
-    "person-outline"
-]
+import RenderIcones from "../Icones/Render"
 
 export default function Mobile() {
 
@@ -15,11 +6,5 @@ export default function Mobile() {
         <div className="fundo-mobile">
             <RenderIcones />
         </div>
-    )
-}
-
-function RenderIcones() {
-    return (
-        names.map(iconName => <Icones name ={iconName} />)
     )
 }

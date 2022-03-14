@@ -1,20 +1,6 @@
-const storys_contents = [
+import storys_contents from "../Story/Data"
 
-    { img: "assets/img/9gag.svg", user: "9gag" },
-    { img: "assets/img/meowed.svg", user: "meowed", },
-    { img: "assets/img/barked.svg", user: "barked", },
-    { img: "assets/img/nathanwpylestrangeplanet.svg", user: "nathanwpylestrangeplanet", },
-    { img: "assets/img/wawawicomics.svg", user: "wawawicomics", },
-    { img: "assets/img/respondeai.svg", user: "respondeai", },
-    { img: "assets/img/filomoderna.svg", user: "filomoderna" },
-    { img: "assets/img/memeriagourmet.svg", user: "memeriagourmet" },
-]
-
-export default function RenderStories() {
-    return (
-        storys_contents.map(object => <Story img={object.img} user={object.user} />)
-    )
-}
+export default function RenderStories() { return (storys_contents.map(object => <Story img={object.img} user={object.user} />)) }
 
 function Story({ img, user }) {
 

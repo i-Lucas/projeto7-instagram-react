@@ -1,4 +1,6 @@
 import Icones from "../Icones/Icones"
+import Componentes from "./Componentes"
+import RenderIcones from "./Render"
 
 export default function Navbar() {
   return (
@@ -10,35 +12,13 @@ export default function Navbar() {
           <img src="assets/img/logo.png" alt="logo" />
         </div>
 
-        <div className="logo-mobile">
-          <Icones name="logo-instagram" />
-        </div>
-
-        <div className="instagram-mobile">
-          <img src="assets/img/logo.png" alt="logo" />
-        </div>
-
-        <div className="pesquisa">
-          <input type="text" placeholder="Pesquisar" />
-        </div>
-
+        <Componentes />
         <RenderIcones />
 
         <div className="icones-mobile">
           <Icones name="paper-plane-outline" />
         </div>
       </div>
-    </div>
-  )
-}
-
-function RenderIcones() {
-  return (
-    <div className="icones">
-      <Icones name="paper-plane-outline" />
-      <Icones name="compass-outline" />
-      <Icones name="heart-outline" />
-      <Icones name="person-outline" />
     </div>
   )
 }

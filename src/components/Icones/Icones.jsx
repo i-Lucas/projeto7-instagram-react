@@ -1,3 +1,3 @@
-export default function Icones(props) {
-    return <ion-icon name={props.name}></ion-icon>
+export default function Icones({name}) {
+    return <ion-icon name={name}></ion-icon>
 }
