@@ -16,7 +16,7 @@ export default function Sidebar() {
                     <div>Ver tudo</div>
                 </div>
 
-                <Sugestoes />
+                <RenderSugestoes />
 
             </div>
 
@@ -39,7 +39,7 @@ const contents = [
     { nome: "smallcutecats", razao: "Segue você", src: "assets/img/smallcutecats.svg" }
 ]
 
-function Sugestoes() {
+function RenderSugestoes() {
 
     return (
         <>
