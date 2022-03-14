@@ -1,49 +1,35 @@
 import Story from "./Story"
+import Sidebar from "./Sidebar"
+import Icones from "../Icones/Icones"
 
-const contents = {
-    
-    img: [
-        "assets/img/9gag.svg",
-        "assets/img/meowed.svg",
-        "assets/img/barked.svg",
-        "assets/img/nathanwpylestrangeplanet.svg",
-        "assets/img/wawawicomics.svg",
-        "assets/img/respondeai.svg",
-        "assets/img/filomoderna.svg",
-        "assets/img/memeriagourmet.svg",
-    ],
-    user: [
-        "9gag",
-        "meowed",
-        "barked",
-        "nathanwpylestrangeplanet",
-        "wawawicomics",
-        "respondeai",
-        "filomoderna",
-        "memeriagourmet"
-    ]
+const contents = [
+
+    { img: "assets/img/9gag.svg", user: "9gag" },
+    { img: "assets/img/meowed.svg", user: "meowed", },
+    { img: "assets/img/barked.svg", user: "barked", },
+    { img: "assets/img/nathanwpylestrangeplanet.svg", user: "nathanwpylestrangeplanet", },
+    { img: "assets/img/wawawicomics.svg", user: "wawawicomics", },
+    { img: "assets/img/respondeai.svg", user: "respondeai", },
+    { img: "assets/img/filomoderna.svg", user: "filomoderna" },
+    { img: "assets/img/memeriagourmet.svg", user: "memeriagourmet" },
+]
+
+function RenderStories() {
+    return (<>{contents.map(({ img, user }) => <Story img={img} user={user} />)}</>)
 }
 
-export default function Body(props) {
+export default function Body() {
+
     return (
         <div className="corpo">
             <div className="esquerda">
 
                 <div className="stories">
 
-                    <Story
-                        img={contents.img[0]}
-                        user={contents.user[0]}
-                    />
-
-                    <Story
-                        img={contents.img[1]}
-                        user={contents.user[1]}
-                    />
-
+                    <RenderStories />
 
                     <div className="setinha">
-                        <ion-icon name="chevron-forward-circle"></ion-icon>
+                        <Icones name="chevron-forward-circle" />
                     </div>
                 </div>
 
@@ -55,7 +41,7 @@ export default function Body(props) {
                                 meowed
                             </div>
                             <div className="acoes">
-                                <ion-icon name="ellipsis-horizontal"></ion-icon>
+                                <Icones name="ellipsis-horizontal" />
                             </div>
                         </div>
 
@@ -66,12 +52,10 @@ export default function Body(props) {
                         <div className="fundo">
                             <div className="acoes">
                                 <div>
-                                    <ion-icon name="heart-outline"></ion-icon>
-                                    <ion-icon name="chatbubble-outline"></ion-icon>
-                                    <ion-icon name="paper-plane-outline"></ion-icon>
+                                    <RenderIcones />
                                 </div>
                                 <div>
-                                    <ion-icon name="bookmark-outline"></ion-icon>
+                                    <Icones name="bookmark-outline" />
                                 </div>
                             </div>
 
@@ -102,9 +86,7 @@ export default function Body(props) {
                         <div className="fundo">
                             <div className="acoes">
                                 <div>
-                                    <ion-icon name="heart-outline"></ion-icon>
-                                    <ion-icon name="chatbubble-outline"></ion-icon>
-                                    <ion-icon name="paper-plane-outline"></ion-icon>
+                                    <RenderIcones />
                                 </div>
                                 <div>
                                     <ion-icon name="bookmark-outline"></ion-icon>
@@ -122,90 +104,17 @@ export default function Body(props) {
                 </div>
             </div>
 
-            <div className="sidebar">
-                <div className="usuario">
-                    <img src="assets/img/catanacomics.svg" alt="x" />
-                    <div className="texto">
-                        <strong>catanacomics</strong>
-                        Catana
-                    </div>
-                </div>
-
-                <div className="sugestoes">
-                    <div className="titulo">
-                        Sugestões para você
-                        <div>Ver tudo</div>
-                    </div>
-
-                    <div className="sugestao">
-                        <div className="usuario">
-                            <img src="assets/img/bad.vibes.memes.svg" alt="x" />
-                            <div className="texto">
-                                <div className="nome">bad.vibes.memes</div>
-                                <div className="razao">Segue você</div>
-                            </div>
-                        </div>
-
-                        <div className="seguir">Seguir</div>
-                    </div>
-
-                    <div className="sugestao">
-                        <div className="usuario">
-                            <img src="assets/img/chibirdart.svg" alt="x" />
-                            <div className="texto">
-                                <div className="nome">chibirdart</div>
-                                <div className="razao">Segue você</div>
-                            </div>
-                        </div>
-
-                        <div className="seguir">Seguir</div>
-                    </div>
-
-                    <div className="sugestao">
-                        <div className="usuario">
-                            <img src="assets/img/razoesparaacreditar.svg" alt="x" />
-                            <div className="texto">
-                                <div className="nome">razoesparaacreditar</div>
-                                <div className="razao">Novo no Instagram</div>
-                            </div>
-                        </div>
-
-                        <div className="seguir">Seguir</div>
-                    </div>
-
-                    <div className="sugestao">
-                        <div className="usuario">
-                            <img src="assets/img/adorable_animals.svg" alt="x" />
-                            <div className="texto">
-                                <div className="nome">adorable_animals</div>
-                                <div className="razao">Segue você</div>
-                            </div>
-                        </div>
-
-                        <div className="seguir">Seguir</div>
-                    </div>
-
-                    <div className="sugestao">
-                        <div className="usuario">
-                            <img src="assets/img/smallcutecats.svg" alt="x" />
-                            <div className="texto">
-                                <div className="nome">smallcutecats</div>
-                                <div className="razao">Segue você</div>
-                            </div>
-                        </div>
-
-                        <div className="seguir">Seguir</div>
-                    </div>
-                </div>
-
-                <div className="links">
-                    Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
-                </div>
-
-                <div className="copyright">
-                    © 2021 INSTAGRAM DO FACEBOOK
-                </div>
-            </div>
+            <Sidebar />
         </div>
+    )
+}
+
+function RenderIcones() {
+    return (
+        <>
+            <ion-icon name="heart-outline"></ion-icon>
+            <ion-icon name="chatbubble-outline"></ion-icon>
+            <ion-icon name="paper-plane-outline"></ion-icon>
+        </>
     )
 }

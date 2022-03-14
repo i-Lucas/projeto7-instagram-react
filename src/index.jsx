@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar"
 import Body from "./components/Body/Body"
 import Mobile from "./components/Mobile/Mobile"
 
-function H1(props) {
+function App() {
     return (
         <>
             <Navbar />
@@ -14,5 +14,4 @@ function H1(props) {
     )
 }
 
-const h1 = H1()
-reactDom.render(h1, document.querySelector(".root"))
+reactDom.render(<App />, document.querySelector(".root"))
