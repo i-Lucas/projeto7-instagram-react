@@ -9,7 +9,7 @@ const posts_contents = [
     },
     {
         userImg: "assets/img/barked.svg",
-        userName: "barked",
+        userName: "lucas",
         postImg: "assets/img/dog.svg",
         likeImg: "assets/img/adorable_animals.svg",
         likeName: "adorable_animals",
