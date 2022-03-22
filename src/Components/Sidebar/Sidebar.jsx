@@ -12,7 +12,7 @@ export default function Sidebar() {
     return (
         <div className="sidebar">
             <div className="usuario">
-                <img src="assets/img/catanacomics.svg" />
+                <img src="assets/img/catanacomics.svg" alt = "user"/>
                 <div className="texto">
                     <strong>catanacomics</strong>
                     Catana

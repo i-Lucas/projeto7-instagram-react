@@ -3,7 +3,7 @@ export default function Post({userImg, userName, postImg, likeImg, userLike, pos
         <div className="post">
             <div className="topo">
                 <div className="usuario">
-                    <img src={userImg} />
+                    <img src={userImg} alt = {userName}/>
                     {userName}
                 </div>
                 <div className="acoes">
@@ -12,7 +12,7 @@ export default function Post({userImg, userName, postImg, likeImg, userLike, pos
             </div>
 
             <div className="conteudo">
-                <img src={postImg} />
+                <img src={postImg} alt = {userName}/>
             </div>
 
             <div className="fundo">
@@ -28,7 +28,7 @@ export default function Post({userImg, userName, postImg, likeImg, userLike, pos
                 </div>
 
                 <div className="curtidas">
-                    <img src={likeImg} />
+                    <img src={likeImg} alt = {userLike}/>
                     <div className="texto">
                         Curtido por <strong>{userLike}</strong> e <strong>{postInfo}</strong>
                     </div>
